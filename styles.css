@@ -498,13 +498,11 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
   width: auto;
   max-width: 130px;
   object-fit: contain;
-  opacity: 0.55;
-  filter: grayscale(1) brightness(1.8);
-  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.25s ease;
+  opacity: 0.75;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .marquee__list img:hover {
   opacity: 1;
-  filter: grayscale(0) brightness(1);
   transform: translateY(-2px);
 }
 
