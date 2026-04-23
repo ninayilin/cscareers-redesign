@@ -519,10 +519,10 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 .marquee__list img[alt="Bloomberg"]   { height: 36px; filter: brightness(0) invert(1); }
 .marquee__list img[alt="Salesforce"]  { height: 64px; }
 .marquee__list img[alt="CoStar"]      { height: 44px; filter: brightness(0) invert(1); }
-.marquee__list img[alt="IBM"]         { height: 52px; filter: brightness(0) invert(1); }
+.marquee__list img[alt="IBM"]         { height: 52px; }
 .marquee__list img[alt="NASA"]        { height: 62px; }
 .marquee__list img[alt="CACI"]        { height: 56px; filter: brightness(0) invert(1); }
-.marquee__list img[alt="Fannie Mae"]  { height: 38px; filter: brightness(0) invert(1); }
+.marquee__list img[alt="Fannie Mae"]  { height: 52px; filter: brightness(0) invert(1); }
 
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
