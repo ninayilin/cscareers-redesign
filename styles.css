@@ -484,27 +484,47 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 .marquee__list {
   display: flex;
   align-items: center;
-  gap: var(--sp-6);
-  padding: var(--sp-2) var(--sp-5);
+  gap: 140px;
+  padding: var(--sp-4) 70px;
   list-style: none;
 }
 .marquee__list li {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  /* per-logo optical sizing — some brands read bigger than others */
+  height: 72px;
+  width: 200px;
 }
 .marquee__list img {
-  height: 28px;
+  max-height: 100%;
+  max-width: 100%;
   width: auto;
-  max-width: 130px;
+  height: auto;
   object-fit: contain;
-  opacity: 0.75;
+  /* Normalize all logos to white so dark-on-dark logos (Meta, Bloomberg, CACI, CoStar) are visible */
+  filter: brightness(0) invert(1);
+  opacity: 0.78;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .marquee__list img:hover {
   opacity: 1;
   transform: translateY(-2px);
 }
+/* Optical sizing overrides — wordmarks need more width, icon-heavy marks need less */
+.marquee__list img[alt="Google"]      { height: 46px; }
+.marquee__list img[alt="Meta"]        { height: 44px; }
+.marquee__list img[alt="Amazon"]      { height: 52px; }
+.marquee__list img[alt="Microsoft"]   { height: 44px; }
+.marquee__list img[alt="Capital One"] { height: 40px; }
+.marquee__list img[alt="Bloomberg"]   { height: 36px; }
+.marquee__list img[alt="Salesforce"]  { height: 64px; }
+.marquee__list img[alt="CoStar"]      { height: 44px; }
+.marquee__list img[alt="IBM"]         { height: 52px; }
+.marquee__list img[alt="NASA"]        { height: 62px; }
+.marquee__list img[alt="CACI"]        { height: 56px; }
+.marquee__list img[alt="Fannie Mae"]  { height: 38px; }
 
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
