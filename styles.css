@@ -564,6 +564,7 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
   background: radial-gradient(circle, rgba(138, 92, 255, 0.25), transparent 60%);
   pointer-events: none;
 }
+.vision__card .eyebrow { background: rgba(8, 4, 18, 0.75); }
 .vision__card h2 {
   font-size: var(--fs-2xl);
   margin-top: var(--sp-3);
