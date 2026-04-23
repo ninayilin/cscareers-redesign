@@ -364,33 +364,6 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 }
 .btn--primary:hover { transform: translateY(-1px); box-shadow: 0 14px 34px -10px rgba(196, 30, 90, 0.8), inset 0 1px 0 rgba(255,255,255,0.35); }
 
-/* Running halo only on hero CTA */
-@keyframes haloBorderSpin {
-  to { transform: rotate(360deg); }
-}
-.hero__ctas .btn--primary {
-  position: relative;
-  isolation: isolate;
-}
-.hero__ctas .btn--primary::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 999px;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0%,
-    transparent 52%,
-    rgba(168, 48, 90, 0.5)  63%,
-    rgba(235, 200, 215, 0.8) 70%,
-    rgba(168, 48, 90, 0.5)  77%,
-    transparent 88%,
-    transparent 100%
-  );
-  z-index: -1;
-  animation: haloBorderSpin 3s linear infinite;
-  filter: blur(1.5px);
-}
 
 .btn--ghost {
   border: 1px solid var(--border-strong);

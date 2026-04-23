@@ -1,3 +1,33 @@
+// Count-up animation for hero stats
+(function () {
+  const statsEl = document.querySelector('.hero__stats');
+  if (!statsEl) return;
+
+  const counters = Array.from(statsEl.querySelectorAll('strong')).map(el => {
+    const text = el.textContent.trim();
+    return { el, target: parseInt(text, 10), suffix: text.replace(/\d/g, '') };
+  });
+
+  const run = () => {
+    const duration = 1000;
+    const start = performance.now();
+    const step = (now) => {
+      const p = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      counters.forEach(({ el, target, suffix }) => {
+        el.textContent = Math.floor(eased * target) + suffix;
+      });
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  const obs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { run(); obs.disconnect(); }
+  }, { threshold: 0.4 });
+  obs.observe(statsEl);
+})();
+
 // Newsletter form stub (no backend).
 document.getElementById('newsletter')?.addEventListener('submit', (e) => {
   e.preventDefault();
