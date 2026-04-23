@@ -9,11 +9,17 @@
   });
 
   const run = () => {
+    // Lock each number's width at its final value before counting from 0
+    counters.forEach(({ el }) => {
+      el.style.display = 'inline-block';
+      el.style.minWidth = el.getBoundingClientRect().width + 'px';
+    });
+
     const duration = 1000;
     const start = performance.now();
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3); // ease-out cubic
+      const eased = 1 - Math.pow(1 - p, 3);
       counters.forEach(({ el, target, suffix }) => {
         el.textContent = Math.floor(eased * target) + suffix;
       });
