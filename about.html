@@ -25,6 +25,7 @@
           <li><a href="about.html" class="is-active">About Us</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="coffee-chat-concepts.html">Coffee Chats</a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -117,22 +118,86 @@
         <span class="eyebrow"><span class="eyebrow__dot"></span>The Board</span>
         <h2>Meet the people running it.</h2>
       </div>
-      <div class="team__grid">
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Nina.jpeg" alt="Nina Yang" /></div><h4>Nina Yang</h4><p>Webmaster</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Sam.jpeg" alt="Sam Jarvis" /></div><h4>Sam Jarvis</h4><p>Co-Marketing Director</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Lauren.jpeg" alt="Lauren Ruiz-Arenas" /></div><h4>Lauren Ruiz-Arenas</h4><p>President</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Gianfranco.jpg" alt="Gianfranco Vivanco" /></div><h4>Gianfranco Vivanco</h4><p>Co-Vice President</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Alex.jpeg" alt="Alex Brown" /></div><h4>Alex Brown</h4><p>Co-Vice President</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Tarun.jpeg" alt="Tarun Nandamudi" /></div><h4>Tarun Nandamudi</h4><p>Operations Director</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Stuti.jpeg" alt="Stuti Shah" /></div><h4>Stuti Shah</h4><p>Finance Director</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Alexa.jpeg" alt="Alexa Thompson" /></div><h4>Alexa Thompson</h4><p>Co-Marketing Director</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Gabe.jpeg" alt="Gabriel Palomino" /></div><h4>Gabriel Palomino</h4><p>Opportunities Chair</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Aaron.jpeg" alt="Aaron Boateng" /></div><h4>Aaron Boateng</h4><p>Webmaster</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Amy.jpeg" alt="Amy Weston" /></div><h4>Amy Weston</h4><p>Fundraising Chair</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Reet.jpeg" alt="Reet Kaler" /></div><h4>Reet Kaler</h4><p>Graphic Designer</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Harita.jpeg" alt="Harita Kondragunta" /></div><h4>Harita Kondragunta</h4><p>Co-Social Media Chair</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Lucas.jpeg" alt="Lucas Lombardi" /></div><h4>Lucas Lombardi</h4><p>Co-Social Media Chair</p></article>
-        <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Pedro.jpeg" alt="Pedro Ribeiro" /></div><h4>Pedro Ribeiro</h4><p>Event Strategist</p></article>
+
+      <div class="team-tabs" role="tablist" aria-label="Board generation">
+        <button class="team-tab is-active" role="tab" aria-selected="true" data-gen="current">Current</button>
+        <button class="team-tab" role="tab" aria-selected="false" data-gen="2024">2024</button>
+      </div>
+
+      <!-- ── Current generation (after Feb 2025) ── -->
+      <div class="team-gen is-active" id="gen-current">
+        <div class="team-tier">
+          <div class="team-tier__label">President</div>
+          <div class="team-tier__row team-tier__row--1">
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Lauren.jpeg" alt="Lauren Ruiz-Arenas" /></div><h4>Lauren Ruiz-Arenas</h4><p>President</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Vice Presidents</div>
+          <div class="team-tier__row team-tier__row--2">
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Gianfranco.jpg" alt="Gianfranco Vivanco" /></div><h4>Gianfranco Vivanco</h4><p>Co-Vice President</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Alex.jpeg" alt="Alex Brown" /></div><h4>Alex Brown</h4><p>Co-Vice President</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Directors</div>
+          <div class="team-tier__row team-tier__row--4">
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Tarun.jpeg" alt="Tarun Nandamudi" /></div><h4>Tarun Nandamudi</h4><p>Operations Director</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Stuti.jpeg" alt="Stuti Shah" /></div><h4>Stuti Shah</h4><p>Finance Director</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Sam.jpeg" alt="Sam Jarvis" /></div><h4>Sam Jarvis</h4><p>Co-Marketing Director</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Alexa.jpeg" alt="Alexa Thompson" /></div><h4>Alexa Thompson</h4><p>Co-Marketing Director</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Board</div>
+          <div class="team-tier__row">
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Gabe.jpeg" alt="Gabriel Palomino" /></div><h4>Gabriel Palomino</h4><p>Opportunities Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Aaron.jpeg" alt="Aaron Boateng" /></div><h4>Aaron Boateng</h4><p>Webmaster</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Nina.jpeg" alt="Nina Yang" /></div><h4>Nina Yang</h4><p>Webmaster</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Amy.jpeg" alt="Amy Weston" /></div><h4>Amy Weston</h4><p>Fundraising Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Reet.jpeg" alt="Reet Kaler" /></div><h4>Reet Kaler</h4><p>Graphic Designer</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Harita.jpeg" alt="Harita Kondragunta" /></div><h4>Harita Kondragunta</h4><p>Co-Social Media Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Lucas.jpeg" alt="Lucas Lombardi" /></div><h4>Lucas Lombardi</h4><p>Co-Social Media Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"><img src="assets/headshots/Pedro.jpeg" alt="Pedro Ribeiro" /></div><h4>Pedro Ribeiro</h4><p>Event Strategist</p></article>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 2024 generation (founding board) ── -->
+      <div class="team-gen" id="gen-2024">
+        <div class="team-tier">
+          <div class="team-tier__label">President</div>
+          <div class="team-tier__row team-tier__row--1">
+            <article class="team-card"><div class="team-card__photo"></div><h4>Anton Bilonog</h4><p>President</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Vice Presidents</div>
+          <div class="team-tier__row team-tier__row--2">
+            <article class="team-card"><div class="team-card__photo"></div><h4>Gio Romero-Ruiz</h4><p>Vice President</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Blake Marterella</h4><p>Vice President</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Directors</div>
+          <div class="team-tier__row team-tier__row--3">
+            <article class="team-card"><div class="team-card__photo"></div><h4>Gabriel Holder</h4><p>Director of Logistics</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Alex Brown</h4><p>Director of Finance</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Bivash Oli</h4><p>Director of Marketing</p></article>
+          </div>
+        </div>
+        <div class="team-tier">
+          <div class="team-tier__label">Board</div>
+          <div class="team-tier__row">
+            <article class="team-card"><div class="team-card__photo"></div><h4>Tarun Nandamudi</h4><p>Event Strategist</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Aaron Boateng</h4><p>Historian</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Gabriel Palomino</h4><p>Ambassador Coordinator</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Stuti Shah</h4><p>Fundraising Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Sam Jarvis</h4><p>Graphic Designer</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Lauren Ruiz</h4><p>Social Media Chair</p></article>
+            <article class="team-card"><div class="team-card__photo"></div><h4>Gianfranco Vivanco</h4><p>First-Year Experience</p></article>
+          </div>
+        </div>
       </div>
     </section>
 

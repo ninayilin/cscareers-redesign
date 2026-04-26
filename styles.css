@@ -957,6 +957,111 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
   letter-spacing: 0.04em;
 }
 
+/* --- Generation tabs --- */
+.team-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 56px;
+}
+.team-tab {
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: var(--text-soft);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.team-tab:hover {
+  border-color: rgba(168, 48, 90, 0.5);
+  color: #fff;
+}
+.team-tab.is-active {
+  background: linear-gradient(120deg, var(--maroon), var(--magenta));
+  border-color: transparent;
+  color: #fff;
+}
+
+/* --- Generation panels --- */
+.team-gen { display: none; }
+.team-gen.is-active { display: block; }
+
+/* --- Tier rows --- */
+.team-tier {
+  margin-bottom: 52px;
+}
+.team-tier__label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-bottom: 24px;
+}
+.team-tier__label::before,
+.team-tier__label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+}
+.team-tier__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.team-tier__row--1 {
+  grid-template-columns: 220px;
+  justify-content: center;
+}
+.team-tier__row--2 {
+  grid-template-columns: repeat(2, 220px);
+  justify-content: center;
+}
+.team-tier__row--3 {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team-tier__row--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Text-only cards (2024 generation) --- */
+.team-card--text {
+  background: rgba(22, 10, 36, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 2px solid rgba(168, 48, 90, 0.35);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  text-align: center;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.team-card--text:hover {
+  border-color: rgba(168, 48, 90, 0.45);
+  border-left-color: var(--magenta);
+  transform: translateY(-2px);
+}
+.team-card--text h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.team-card--text p {
+  font-size: 12px;
+  color: var(--text-mute);
+  letter-spacing: 0.04em;
+}
+
 /* ============================================================
    EVENTS PAGE
    ============================================================ */
@@ -1312,6 +1417,10 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
   .about-mission { grid-template-columns: 1fr; gap: 36px; }
   .pillars__grid { grid-template-columns: 1fr; }
   .team__grid { grid-template-columns: repeat(2, 1fr); }
+  .team-tier__row,
+  .team-tier__row--4 { grid-template-columns: repeat(2, 1fr); }
+  .team-tier__row--3 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+  .team-tier__row--2 { grid-template-columns: repeat(2, 1fr); }
   .events-grid { grid-template-columns: 1fr; }
   .featured-event__body { padding: 32px 26px; }
   .featured-event__meta { grid-template-columns: 1fr; gap: 14px; }
@@ -1325,6 +1434,11 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
 
 @media (max-width: 520px) {
   .team__grid { grid-template-columns: 1fr; }
+  .team-tier__row,
+  .team-tier__row--2,
+  .team-tier__row--3,
+  .team-tier__row--4 { grid-template-columns: 1fr; }
+  .team-tier__row--1 { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
   .mission__stats { grid-template-columns: 1fr; }
 }

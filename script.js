@@ -1,3 +1,19 @@
+// Board generation tabs
+(function () {
+  const tabs = document.querySelectorAll('.team-tab');
+  const gens = document.querySelectorAll('.team-gen');
+  if (!tabs.length) return;
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected', 'false'); });
+      gens.forEach(g => g.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById('gen-' + tab.dataset.gen)?.classList.add('is-active');
+    });
+  });
+})();
+
 // Count-up animation for hero stats
 (function () {
   const statsEl = document.querySelector('.hero__stats');
