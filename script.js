@@ -1,3 +1,13 @@
+// Staggered pillar card entrance
+(function () {
+  const stack = document.querySelector('.pillars__stack');
+  if (!stack) return;
+  const obs = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { stack.classList.add('is-visible'); obs.disconnect(); }
+  }, { threshold: 0.2 });
+  obs.observe(stack);
+})();
+
 // Board generation tabs
 (function () {
   const tabs = document.querySelectorAll('.team-tab');
