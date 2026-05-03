@@ -806,13 +806,20 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; line-hei
   overflow: hidden;
   flex: 1;
   min-height: 260px;
+  position: relative;
 }
-.intro-pillars__photo {
+.slideshow__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slideshow__track img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  flex: 0 0 100%;
   display: block;
-  border-radius: var(--radius-lg);
 }
 
 .page-cta {

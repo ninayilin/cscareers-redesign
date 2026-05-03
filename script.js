@@ -1,3 +1,15 @@
+// Auto-sliding image carousel (about page header)
+(function () {
+  const track = document.querySelector('.slideshow__track');
+  if (!track) return;
+  const count = track.children.length;
+  let current = 0;
+  setInterval(() => {
+    current = (current + 1) % count;
+    track.style.transform = `translateX(-${current * 100}%)`;
+  }, 2000);
+})();
+
 // Staggered pillar card entrance
 (function () {
   const stack = document.querySelector('.pillars__stack');
